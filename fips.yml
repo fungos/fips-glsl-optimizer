@@ -1,0 +1,17 @@
+# fips-fcpp
+---
+
+run:
+    glsl_compiler:
+        cwd: .
+    glslopt:
+        cwd: .
+
+exports:
+    header-dirs:
+        - glsl-optimizer/src
+        - glsl-optimizer/src/glsl
+    modules:
+        mesa: .
+        glcpp_library: .
+        glsl_optimizer: .
