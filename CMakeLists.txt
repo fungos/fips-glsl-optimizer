@@ -55,3 +55,7 @@ if (NOT FIPS_IMPORT)
     fips_finish()
 endif()
 
+if(FIPS_MSVC)
+    set_target_properties(glcpp_library PROPERTIES COMPILE_FLAGS "/wd4005 /wd4090 /wd4291")
+    set_target_properties(glsl_optimizer PROPERTIES COMPILE_FLAGS "/wd4005 /wd4311 /wd4312 /wd4291 /wd4715 /wd4805")
+endif()
